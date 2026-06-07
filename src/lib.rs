@@ -75,12 +75,12 @@ impl zed::Extension for DbtExtension {
             .ok()
             .and_then(|s| s.settings);
 
-        let manifest_path = settings
+        let relative = settings
             .as_ref()
             .and_then(|s| s.get("manifest_path"))
             .and_then(|v| v.as_str())
-            .unwrap_or("target/manifest.json")
-            .to_string();
+            .unwrap_or("target/manifest.json");
+        let manifest_path = format!("{}/{}", worktree.root_path(), relative);
 
         let max_depth = settings
             .as_ref()
