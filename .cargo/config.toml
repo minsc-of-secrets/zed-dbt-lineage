@@ -1,0 +1,3 @@
+[build]
+# dbt-lsp builds for native; zed-dbt must be built with:
+# cargo build -p zed-dbt --target wasm32-wasip1 --release

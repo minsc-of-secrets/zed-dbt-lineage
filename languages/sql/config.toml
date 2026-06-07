@@ -1,0 +1,3 @@
+name = "SQL"
+path_suffixes = ["sql"]
+language_servers = ["dbt-lsp"]

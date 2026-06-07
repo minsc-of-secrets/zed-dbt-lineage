@@ -1,0 +1,3 @@
+[workspace]
+members = ["crates/dbt-lsp", "crates/zed-dbt"]
+resolver = "2"

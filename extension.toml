@@ -1,0 +1,10 @@
+id = "zed-dbt"
+name = "dbt Lineage"
+description = "dbt lineage tracing via manifest.json"
+version = "0.1.0"
+schema_version = 1
+authors = ["Your Name <you@example.com>"]
+
+[language_servers.dbt-lsp]
+name = "dbt LSP"
+language = "SQL"

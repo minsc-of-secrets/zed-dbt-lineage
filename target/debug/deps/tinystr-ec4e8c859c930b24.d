@@ -1,0 +1,12 @@
+/Users/minsc/git/zed_dbt_extension/target/debug/deps/tinystr-ec4e8c859c930b24.d: /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/lib.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/macros.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/ascii.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/asciibyte.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/error.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/int_ops.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/unvalidated.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/ule.rs
+
+/Users/minsc/git/zed_dbt_extension/target/debug/deps/libtinystr-ec4e8c859c930b24.rmeta: /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/lib.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/macros.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/ascii.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/asciibyte.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/error.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/int_ops.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/unvalidated.rs /Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/ule.rs
+
+/Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/lib.rs:
+/Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/macros.rs:
+/Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/ascii.rs:
+/Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/asciibyte.rs:
+/Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/error.rs:
+/Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/int_ops.rs:
+/Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/unvalidated.rs:
+/Users/minsc/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.3/src/ule.rs:
