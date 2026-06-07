@@ -70,13 +70,14 @@ impl LanguageServer for Backend {
 
         let pos = params.text_document_position_params.position;
 
-        // Read the document text from the URI (file path)
         let uri = params.text_document_position_params.text_document.uri;
-        let file_path = uri.to_file_path().ok().and_then(|p| {
-            std::fs::read_to_string(&p).ok()
-        });
+        let file_content = if let Some(path) = uri.to_file_path().ok() {
+            tokio::fs::read_to_string(&path).await.ok()
+        } else {
+            None
+        };
 
-        let line_text = file_path
+        let line_text = file_content
             .as_deref()
             .and_then(|text| text.lines().nth(pos.line as usize))
             .unwrap_or("")
