@@ -125,7 +125,9 @@ impl LanguageServer for Backend {
             },
         };
 
-        let (node_id, node_name, node_file_path) = resolved.unwrap();
+        let Some((node_id, node_name, node_file_path)) = resolved else {
+            return Ok(None);
+        };
         let up = upstream(graph, &node_id, max_depth);
         let down = downstream(graph, &node_id, max_depth);
         let md = render_hover(&node_name, &node_file_path, &up, &down);
@@ -143,7 +145,7 @@ impl LanguageServer for Backend {
 impl Backend {
     async fn reload_manifest(&self) {
         let path = self.manifest_path.read().await.clone();
-        match std::fs::read_to_string(&path) {
+        match tokio::fs::read_to_string(&path).await {
             Ok(json) => match ManifestGraph::from_json(&json) {
                 Ok(graph) => {
                     *self.graph.write().await = Some(graph);

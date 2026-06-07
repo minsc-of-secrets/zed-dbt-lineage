@@ -79,18 +79,19 @@ fn build_tree(
                 .collect()
         };
 
-        let unvisited: Vec<String> = neighbor_ids
-            .into_iter()
-            .filter(|id| !visited.contains(id))
-            .collect();
-
         let mut result = Vec::new();
-        for id in &unvisited {
+        for id in &neighbor_ids {
+            if visited.contains(id) {
+                continue;
+            }
             if let Some(dbt_node) = graph.nodes.get(id) {
                 let mut lineage_node = LineageNode::from_dbt(dbt_node, depth);
-                visited.insert(id.clone());
+                // Clone visited per branch so sibling paths don't suppress shared ancestors
+                // (diamond dependencies). The root's visited entry prevents infinite cycles.
+                let mut branch_visited = visited.clone();
+                branch_visited.insert(id.clone());
                 lineage_node.children =
-                    recurse(graph, id, depth + 1, max_depth, is_upstream, visited);
+                    recurse(graph, id, depth + 1, max_depth, is_upstream, &mut branch_visited);
                 result.push(lineage_node);
             }
         }

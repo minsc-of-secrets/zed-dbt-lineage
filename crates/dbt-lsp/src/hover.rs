@@ -12,12 +12,12 @@ static REF_RE: OnceLock<Regex> = OnceLock::new();
 static SOURCE_RE: OnceLock<Regex> = OnceLock::new();
 
 fn ref_re() -> &'static Regex {
-    REF_RE.get_or_init(|| Regex::new(r#"ref\(\s*['"](\w+)['"]\s*\)"#).unwrap())
+    REF_RE.get_or_init(|| Regex::new(r#"ref\(\s*['"]([a-zA-Z0-9_-]+)['"]\s*\)"#).unwrap())
 }
 
 fn source_re() -> &'static Regex {
     SOURCE_RE.get_or_init(|| {
-        Regex::new(r#"source\(\s*['"](\w+)['"]\s*,\s*['"](\w+)['"]\s*\)"#).unwrap()
+        Regex::new(r#"source\(\s*['"]([a-zA-Z0-9_-]+)['"]\s*,\s*['"]([a-zA-Z0-9_-]+)['"]\s*\)"#).unwrap()
     })
 }
 
